@@ -223,7 +223,7 @@ tr:last-child td{border:0}
 <h1>Ton année pour devenir <em>la version la plus lumineuse</em> de toi-même.</h1>
 <p>Ton prénom vient du latin « flavus », qui veut dire blond, doré. Alors ton dossier est aux couleurs de l'or et du soleil. Flavie, tu as déjà prouvé que tu savais avancer seule. Maintenant, on avance ensemble, avec une méthode claire : perdre de la graisse, construire du muscle et gagner en assurance, sans jamais te mettre en danger.</p>
 <div class="affhero"><small id="affd">AFFIRMATION DU JOUR</small><b id="afft"></b></div>
-<nav class="nav"><a href="#profil">Profil</a><a href="#tanita">Tanita</a><a href="#calories">Calories</a><a href="#annee">Mon année</a><a href="#horaires">Horaires</a><a href="#reset">Reset 7 jours</a><a href="#aliments">Aliments</a><a href="#nutriments">Nutriments</a><a href="#quiz">Quiz du jour</a><a href="#graines">Graines</a><a href="#guide">Guide</a><a href="#courses">Courses</a><a href="#compteur">Compteur</a><a href="#menus">31 jours</a><a href="#fatsecret">FatSecret</a></nav>
+<nav class="nav"><a href="#profil">Profil</a><a href="#tanita">Tanita</a><a href="#calories">Calories</a><a href="#annee">Mon année</a><a href="#horaires">Horaires</a><a href="#reset">Reset 7 jours</a><a href="#aliments">Aliments</a><a href="#nutriments">Nutriments</a><a href="#quiz">Quiz du jour</a><a href="#graines">Graines</a><a href="#muesli">Mueslis</a><a href="#guide">Guide</a><a href="#etiquette">Étiquettes</a><a href="#courses">Courses</a><a href="#compteur">Compteur</a><a href="#menus">31 jours</a><a href="#complements">Compléments</a><a href="#fatsecret">FatSecret</a></nav>
 </header>
 <main class="content">
 
@@ -477,7 +477,49 @@ tr:last-child td{border:0}
 <div class="callout"><h3>À savoir</h3><p>Le sirop d'agave a un index glycémique bas, mais il contient environ 80 % de fructose. On le garde pour l'occasionnel. Le sucre de coco et le miel restent des sucres : 1 cuillère à café de temps en temps, pas tous les jours.</p></div>
 </section>
 
-<section class="block" id="guide">
+<section class="block" id="muesli">
+<div class="kicker">Petit-déjeuner et collation</div>
+<h2 class="title">Tes mueslis maison</h2><div class="rule"></div>
+<p class="lead">Les mueslis du commerce cachent souvent 15 à 25 g de sucres pour 100 g (regarde l'étiquette). Fait maison, tu choisis tout : zéro sucre ajouté, plus de protéines, plus de fibres, et un bocal prêt pour 2 à 3 semaines. Parfait pour ton petit-déjeuner, ou en collation à emporter en boutique.</p>
+<div class="tabs" id="mutabs"></div>
+<div class="card" id="mucard" style="margin-top:14px"></div>
+<div class="card" style="margin-top:14px">
+<h3>Ta portion</h3>
+<p style="font-size:14px;color:var(--muted)">Fais glisser pour voir ce que contient ta portion. Repère : <b>40 g</b>, pesés sur la balance.</p>
+<input type="range" id="mug" min="30" max="60" step="5" value="40" style="width:100%;accent-color:var(--wine)">
+<div class="grid g4 stats" style="margin-top:10px">
+<div class="stat"><b id="muk"></b><span>kcal</span></div>
+<div class="stat"><b id="mup"></b><span>Protéines</span></div>
+<div class="stat"><b id="muc"></b><span>Glucides</span></div>
+<div class="stat"><b id="mul"></b><span>Lipides</span></div>
+</div>
+<p id="mutot" style="font-size:14px;margin:12px 0 0"></p>
+</div>
+<div class="grid g2" style="margin-top:14px">
+<div class="card"><h3>Ton petit-déjeuner complet</h3><p>40 g de muesli + 150 à 200 g de skyr ou de fromage blanc 0 % + 1 fruit (ou 100 g de fruits rouges). Environ <b>300 à 340 kcal et 25 g de protéines</b> : tu tiens jusqu'au déjeuner sans fringale, même debout toute la matinée.</p></div>
+<div class="card"><h3>Les règles d'or</h3><p>Toujours <b>pesé</b>, jamais versé à l'œil : le muesli est très calorique. Conserve-le dans un bocal en verre bien fermé, au sec. Dans FatSecret (ou Yazio, Foodvisor), crée une « recette » avec les ingrédients du bocal : tu n'auras plus qu'à entrer tes 40 g. Avec le compteur intégré, ajoute-le en aliment personnalisé grâce aux valeurs du curseur.</p></div>
+</div>
+<div class="callout"><h3>Pour varier sans sucre ajouté</h3><p>Cannelle, vanille en poudre, zeste d'orange, cacao non sucré, gingembre, cardamome : ils donnent du goût sans une calorie. Les fruits secs (raisins, abricots, dattes) restent en petite quantité : 40 g maximum pour tout le bocal.</p></div>
+</section>
+<script>
+(function(){
+function $(x){return document.querySelector(x)}
+var MU=[
+{n:"Classique",t:"Muesli classique amandes et abricots",i:["300 g de flocons d'avoine","60 g d'amandes concassées","40 g de graines de courge","30 g de graines de lin","40 g d'abricots secs coupés en petits dés","1 c. à café de cannelle"],s:"Mélange tout dans un grand saladier, puis verse dans un bocal. C'est prêt.",b:470,k:412,p:15.3,c:43.8,l:17.5,w:"Le plus simple et le plus complet : idéal pour commencer."},
+{n:"Choco-noisette",t:"Muesli chocolat et noisettes",i:["300 g de flocons d'avoine","50 g de noisettes concassées","30 g de chocolat noir 85 % en éclats","30 g de graines de chia","20 g de cacao en poudre non sucré"],s:"Mélange l'avoine et le cacao en premier pour bien l'enrober, puis ajoute le reste.",b:430,k:424,p:14,c:43.8,l:18.5,w:"Ton anti-envie de sucré : le goût du chocolat, sans le pic de sucre."},
+{n:"Fruits rouges et coco",t:"Muesli fruits rouges et coco",i:["300 g de flocons d'avoine","40 g de noix de coco râpée","40 g d'amandes effilées","30 g de graines de tournesol","20 g de fruits rouges lyophilisés (rayon fruits secs)","Zeste d'un citron vert (facultatif)"],s:"Mélange tout. Les fruits lyophilisés gardent leur croquant si le bocal est bien fermé.",b:430,k:431,p:13.7,c:46,l:19.2,w:"Frais et fruité, parfait avec un skyr nature."},
+{n:"Granola protéiné",t:"Granola protéiné croustillant (au four)",i:["250 g de flocons d'avoine","60 g de whey vanille (ou nature)","2 blancs d'œufs","40 g d'amandes concassées","30 g de graines de courge","20 g de miel (1 c. à soupe)","1 c. à café de cannelle"],s:"Four à 160 °C. Mélange tous les ingrédients secs, puis ajoute les blancs d'œufs et le miel, et mélange jusqu'à ce que tout soit humide. Étale sur une plaque avec du papier cuisson. Cuis 20 à 25 min en mélangeant à mi-cuisson. Laisse refroidir complètement avant de mettre en bocal : c'est là qu'il devient croustillant.",b:410,k:402,p:26,c:41.7,l:12.8,w:"Le plus protéiné : presque deux fois plus de protéines que les autres."}],cur=0;
+function f(x){return (Math.round(x*10)/10).toString().replace('.',',')}
+function draw(){var m=MU[cur],h='<div class="dayhead"><h3>'+m.t+'</h3><span class="tag">≈ '+Math.round(m.k*0.4)+' kcal / 40 g</span></div><p style="font-size:14px;color:var(--muted);margin:0 0 10px">'+m.w+'</p><h4 style="margin:10px 0 6px">Pour un bocal d\'environ '+m.b+' g (≈ '+Math.round(m.b/40)+' portions)</h4>';
+m.i.forEach(function(x){h+='<div class="food"><i class="dot g"></i><span class="n">'+x+'</span></div>'});
+h+='<h4 style="margin:14px 0 6px">Préparation</h4><p style="font-size:15px">'+m.s+'</p>';$('#mucard').innerHTML=h;
+document.querySelectorAll('#mutabs button').forEach(function(b,i){b.classList.toggle('on',i==cur)});por()}
+function por(){var m=MU[cur],g=+$('#mug').value;$('#muk').textContent=Math.round(m.k*g/100);$('#mup').textContent=f(m.p*g/100)+' g';$('#muc').textContent=f(m.c*g/100)+' g';$('#mul').textContent=f(m.l*g/100)+' g';
+$('#mutot').innerHTML='Avec 170 g de skyr et 1 pomme, ton petit-déjeuner fait environ <b>'+Math.round(m.k*g/100+107+80)+' kcal</b> et <b>'+f(m.p*g/100+18.7+0.4)+' g de protéines</b>.'+(g>45?' <span style="color:#c0392b;font-weight:800">Au-delà de 45 g, ça devient un vrai repas : garde 40 g.</span>':'')}
+var t=$('#mutabs');MU.forEach(function(m,i){var b=document.createElement('button');b.textContent=m.n;b.onclick=function(){cur=i;draw()};t.appendChild(b)});
+$('#mug').oninput=por;draw();
+})();
+</script><section class="block" id="guide">
 <div class="kicker">Pour tout comprendre</div>
 <h2 class="title">Ce que tu mets dans ton assiette</h2><div class="rule"></div>
 <div class="tabs" data-group="guide"><button class="on" data-p="x1">Protéines</button><button data-p="x2">Glucides</button><button data-p="x3">Légumes et fibres</button><button data-p="x4">Lipides</button><button data-p="x5">Vitamines</button><button data-p="x6">Anti-inflammatoires</button></div>
@@ -526,7 +568,98 @@ tr:last-child td{border:0}
 </div></div>
 </section>
 
-<section class="block" id="courses">
+<section class="block" id="etiquette">
+<div class="kicker">Indispensable</div>
+<h2 class="title">Lire une étiquette</h2><div class="rule"></div>
+<p class="lead">C'est la compétence qui va te rendre autonome pour toute ta vie. En 30 secondes, au supermarché, tu sauras si un produit t'aide ou te freine. Le devant du paquet, c'est la publicité. La vérité est au dos.</p>
+
+<div class="grid g2">
+<div class="card"><span class="tag">ÉTAPE 1</span><h3 style="margin-top:8px">Pour 100 g ou par portion ?</h3><p>Les valeurs sont toujours données pour 100 g (ou 100 ml), parfois aussi par portion. Compare toujours deux produits <b>pour 100 g</b>. Et vérifie la portion : elle est souvent plus petite que ce que tu manges vraiment.</p></div>
+<div class="card"><span class="tag">ÉTAPE 2</span><h3 style="margin-top:8px">Les calories (kcal)</h3><p>Regarde la ligne « kcal », pas « kJ ». Puis fais le calcul pour ta vraie quantité : kcal pour 100 g × grammes mangés ÷ 100. Le calculateur plus bas le fait pour toi.</p></div>
+<div class="card"><span class="tag">ÉTAPE 3</span><h3 style="margin-top:8px">« Dont sucres »</h3><p>Sous « Glucides », la ligne <b>« dont sucres »</b> est la plus importante. Plus de 22,5 g pour 100 g : c'est très sucré. Moins de 5 g : c'est bien. Pour une boisson : plus de 11 g pour 100 ml, c'est beaucoup (c'est le cas de la plupart des sodas).</p></div>
+<div class="card"><span class="tag">ÉTAPE 4</span><h3 style="margin-top:8px">Les protéines</h3><p>C'est ta ligne « amie ». Plus il y en a, plus le produit rassasie et protège ton muscle. Un produit avec au moins 10 g de protéines pour 100 g est un bon allié.</p></div>
+<div class="card"><span class="tag">ÉTAPE 5</span><h3 style="margin-top:8px">Lipides et « dont acides gras saturés »</h3><p>Le gras n'est pas l'ennemi, mais il est très calorique. Regarde surtout <b>les saturés</b> : plus de 5 g pour 100 g, c'est élevé (biscuits, charcuterie, viennoiseries).</p></div>
+<div class="card"><span class="tag">ÉTAPE 6</span><h3 style="margin-top:8px">Le sel</h3><p>Plus de 1,5 g pour 100 g, c'est beaucoup. Trop de sel fait gonfler et monter la balance (de l'eau, pas du gras), surtout dans les plats préparés et les sauces.</p></div>
+<div class="card"><span class="tag">ÉTAPE 7</span><h3 style="margin-top:8px">La liste des ingrédients</h3><p>Les ingrédients sont classés du <b>plus présent au moins présent</b>. Si le sucre est dans les 3 premiers, c'est surtout du sucre. Une liste courte que tu comprends = un bon signe.</p></div>
+<div class="card"><span class="tag">ÉTAPE 8</span><h3 style="margin-top:8px">Les sucres cachés</h3><p>Le sucre a plein de noms : sirop de glucose-fructose, dextrose, maltodextrine, saccharose, sirop d'agave, miel, sucre inverti, concentré de jus de fruits. Plusieurs de ces noms dans la liste = beaucoup de sucre au total.</p></div>
+</div>
+
+<h3 style="margin:26px 0 10px;color:var(--wine)">Tes repères pour 100 g</h3>
+<div class="tw"><table>
+<tr><th>Nutriment</th><th>Faible</th><th>Élevé</th></tr>
+<tr><td>Dont sucres</td><td><i class="dot g"></i> moins de 5 g</td><td><i class="dot r"></i> plus de 22,5 g</td></tr>
+<tr><td>Lipides</td><td><i class="dot g"></i> moins de 3 g</td><td><i class="dot r"></i> plus de 17,5 g</td></tr>
+<tr><td>Dont saturés</td><td><i class="dot g"></i> moins de 1,5 g</td><td><i class="dot r"></i> plus de 5 g</td></tr>
+<tr><td>Sel</td><td><i class="dot g"></i> moins de 0,3 g</td><td><i class="dot r"></i> plus de 1,5 g</td></tr>
+<tr><td>Fibres</td><td>·</td><td><i class="dot g"></i> 6 g et plus = riche en fibres</td></tr>
+<tr><td>Protéines</td><td>·</td><td><i class="dot g"></i> 10 g et plus = bon allié</td></tr>
+</table></div>
+<p style="font-size:13px;color:var(--muted);margin-top:8px">Entre les deux : avec mesure. Pour les boissons, divise les seuils de sucres par deux.</p>
+
+<div class="card" style="margin-top:18px">
+<h3>Exemple type : des céréales chocolatées du commerce</h3>
+<p style="font-size:14px;color:var(--muted)">Valeurs typiques de ce genre de produit. Touche chaque ligne pour comprendre ce qu'elle veut dire.</p>
+<div class="tw" style="margin-top:8px"><table id="etab">
+<tr><th>Valeurs nutritionnelles</th><th>Pour 100 g</th><th>Bol de 40 g</th></tr>
+<tr data-i="0"><td>Énergie</td><td>390 kcal</td><td>156 kcal</td></tr>
+<tr data-i="1"><td>Lipides</td><td>4 g</td><td>1,6 g</td></tr>
+<tr data-i="2"><td>· dont saturés</td><td>1,5 g</td><td>0,6 g</td></tr>
+<tr data-i="3"><td>Glucides</td><td>79 g</td><td>31,6 g</td></tr>
+<tr data-i="4"><td>· dont sucres</td><td>25 g</td><td>10 g</td></tr>
+<tr data-i="5"><td>Fibres</td><td>5 g</td><td>2 g</td></tr>
+<tr data-i="6"><td>Protéines</td><td>8 g</td><td>3,2 g</td></tr>
+<tr data-i="7"><td>Sel</td><td>0,4 g</td><td>0,16 g</td></tr>
+</table></div>
+<div class="callout" id="etxt" style="margin-top:12px"><p>Touche une ligne du tableau.</p></div>
+</div>
+
+<div class="card" style="margin-top:18px">
+<h3>Calculateur de portion</h3>
+<p style="font-size:14px;color:var(--muted)">Recopie les valeurs pour 100 g de l'étiquette et la quantité que tu manges.</p>
+<div class="grid g2" style="gap:10px;margin-top:10px">
+<input class="ccin" id="ek" inputmode="decimal" placeholder="kcal pour 100 g">
+<input class="ccin" id="eq" inputmode="decimal" placeholder="Quantité mangée (g)">
+<input class="ccin" id="es" inputmode="decimal" placeholder="Dont sucres pour 100 g">
+<input class="ccin" id="ep" inputmode="decimal" placeholder="Protéines pour 100 g">
+</div>
+<div class="formula" id="eres" style="margin-top:12px"><p>Remplis les cases pour voir le résultat.</p></div>
+</div>
+
+<div class="quiz" id="equiz"></div>
+
+<div class="callout"><h3>Les pièges du devant du paquet</h3><p>« Allégé » veut dire 30 % de moins que la version normale, pas forcément peu calorique. « Sans sucres ajoutés » peut quand même contenir beaucoup de sucres naturels. « Riche en fibres », « healthy », « protéiné », « bio » ou un Nutri-Score A ne disent rien de la quantité que tu manges. Retourne toujours le paquet.</p></div>
+</section>
+
+<script>
+(function(){
+function $(x){return document.querySelector(x)}
+var E=["<b>Énergie :</b> 156 kcal pour 40 g. Mais un bol versé à l'œil fait souvent 60 à 80 g : on passe vite à 250 ou 300 kcal sans s'en rendre compte. D'où l'importance de peser.",
+"<b>Lipides :</b> 4 g pour 100 g, c'est peu. Mais attention : « peu gras » ne veut pas dire « peu calorique ». Ne te fie jamais à une seule ligne.",
+"<b>Dont saturés :</b> 1,5 g pour 100 g, c'est la limite basse. Pas d'inquiétude sur cette ligne.",
+"<b>Glucides :</b> 79 g pour 100 g. C'est presque uniquement du carburant rapide, avec peu de fibres pour le ralentir.",
+"<b>Dont sucres :</b> 25 g pour 100 g, au-dessus de 22,5 g : c'est très sucré. Dans un bol de 40 g, environ 2 à 3 morceaux de sucre, avant même d'ajouter le lait. Résultat classique : faim vers 10 h.",
+"<b>Fibres :</b> 5 g, c'est correct mais pas « riche en fibres » (il faudrait 6 g). Les flocons d'avoine en ont environ 10 g.",
+"<b>Protéines :</b> 8 g pour 100 g, soit 3 g dans ton bol. Presque rien pour ton muscle et ta satiété. Un skyr en apporte 15 à 20 g.",
+"<b>Sel :</b> 0,4 g pour 100 g. Un peu de sel caché, même dans un produit sucré."];
+document.querySelectorAll('#etab tr[data-i]').forEach(function(r){r.style.cursor='pointer';r.onclick=function(){document.querySelectorAll('#etab tr[data-i] td').forEach(function(t){t.style.background=''});r.querySelectorAll('td').forEach(function(t){t.style.background='var(--blush)'});$('#etxt').innerHTML='<p>'+E[+r.dataset.i]+'</p>'}});
+function n(id){return parseFloat(($(id).value||'').replace(',','.'))}
+function calc(){var k=n('#ek'),q=n('#eq'),su=n('#es'),p=n('#ep');if(!(k>=0)||!(q>0)){$('#eres').innerHTML='<p>Remplis au moins les kcal et la quantité.</p>';return}
+var h='<p><b>'+Math.round(k*q/100)+' kcal</b> pour '+q+' g.</p>';
+if(su>=0){var sg=su*q/100;h+='<p>Sucres : <b>'+sg.toFixed(1).replace('.',',')+' g</b>, soit environ '+Math.round(sg/4)+' morceau(x) de sucre. '+(su>22.5?'<span style="color:#c0392b;font-weight:800">Très sucré.</span>':su<5?'<span style="color:#5f7b64;font-weight:800">Peu sucré, bien.</span>':'Avec mesure.')+'</p>'}
+if(p>=0){h+='<p>Protéines : <b>'+(p*q/100).toFixed(1).replace('.',',')+' g</b>. '+(p>=10?'<span style="color:#5f7b64;font-weight:800">Bon allié.</span>':'Peu protéiné : ajoute une source de protéines à côté.')+'</p>'}
+$('#eres').innerHTML=h}
+['#ek','#eq','#es','#ep'].forEach(function(i){$(i).oninput=calc});
+var Q=[["Pour comparer deux yaourts, tu regardes…",["Le prix","Les valeurs pour 100 g","La couleur du pot","Le Nutri-Score seul"],1,"Toujours pour 100 g : c'est la seule façon de comparer à égalité."],
+["Dans la liste, le premier ingrédient est…",["Le moins présent","Le plus présent","Le plus sain","Au hasard"],1,"Les ingrédients sont classés du plus présent au moins présent."],
+["« Sirop de glucose-fructose », c'est…",["Une vitamine","Du sucre","Une fibre","Un conservateur"],1,"C'est un sucre caché, très courant dans les boissons et biscuits."],
+["Un produit « allégé » est forcément peu calorique.",["Vrai","Faux"],1,"Faux : il a juste 30 % de moins que la version normale."],
+["Des céréales à 25 g de sucres pour 100 g, c'est…",["Peu sucré","Avec mesure","Très sucré"],2,"Plus de 22,5 g pour 100 g : très sucré."]],qi=0,sc=0;
+function dq(){var z=$('#equiz');if(qi>=Q.length){z.innerHTML='<h3>Quiz étiquette terminé</h3><p>'+sc+' / '+Q.length+' bonnes réponses. '+(sc==Q.length?'Parfait, tu es prête pour le supermarché, Flavie.':'Relis les étapes et recommence, ça vient vite.')+'</p><button class="nx" id="eqr">Recommencer</button>';$('#eqr').onclick=function(){qi=0;sc=0;dq()};return}
+var q=Q[qi],h='<small style="color:var(--muted);font-weight:800">QUIZ ÉTIQUETTE · '+(qi+1)+' / '+Q.length+'</small><h3>'+q[0]+'</h3><div class="opts">';q[1].forEach(function(o,i){h+='<button data-i="'+i+'">'+o+'</button>'});h+='</div><p id="eqe" style="font-size:14px;margin:10px 0 0"></p>';z.innerHTML=h;
+z.querySelectorAll('.opts button').forEach(function(b){b.onclick=function(){if(z.dataset.l==qi)return;z.dataset.l=qi;var ok=+b.dataset.i==q[2];if(ok)sc++;b.classList.add(ok?'ok':'ko');z.querySelectorAll('.opts button')[q[2]].classList.add('ok');$('#eqe').innerHTML=q[3]+'<br><button class="nx" id="eqn">Suivante</button>';$('#eqn').onclick=function(){qi++;dq()}}})}
+dq();
+})();
+</script><section class="block" id="courses">
 <div class="kicker">Organisation</div>
 <h2 class="title">Ta liste de courses</h2><div class="rule"></div>
 <p class="lead">Une base qui ne change pas, pour que tes courses restent simples, et quelques produits qui tournent chaque semaine pour ne jamais te lasser. Tes cases cochées restent enregistrées.</p>
@@ -611,6 +744,7 @@ tr:last-child td{border:0}
 <div class="card"><h3>5. Note tout, même l'huile</h3><p>Une cuillère à soupe d'huile, c'est environ 90 kcal. C'est souvent là que se cachent les calories.</p></div>
 <div class="card"><h3>6. Regarde la semaine</h3><p>Un jour à +200 kcal n'est pas grave. C'est la moyenne sur 7 jours qui fait le résultat.</p></div>
 </div>
+<div class="callout"><h3>Pas fan de FatSecret ?</h3><p>Tu peux aussi utiliser <b>Yazio</b> (très claire, scan des codes-barres), <b>Foodvisor</b> (tu prends ton assiette en photo) ou tout simplement le <b>compteur intégré</b> à ce dossier, déjà réglé sur tes paliers. Les mêmes réflexes s'appliquent : peser cru, tout noter, regarder la moyenne de la semaine.</p></div>
 </section>
 
 <section class="block">
@@ -627,9 +761,22 @@ tr:last-child td{border:0}
 </div>
 </section>
 
-<section class="partner">
+<section class="block" id="complements">
+<div class="kicker">En bonus, jamais à la place</div>
+<h2 class="title">Les compléments alimentaires</h2><div class="rule"></div>
+<p class="lead">Un complément ne fait pas maigrir à ta place. Il <b>complète</b> une alimentation, un sommeil et des séances déjà en place. Voici ce qui peut vraiment t'aider, et ce qu'on évite.</p>
+<div class="grid g2">
+<div class="card" style="border:2px solid var(--wine)"><span class="tag">RECOMMANDÉ</span><h3 style="margin-top:8px">La créatine monohydrate</h3><p>C'est le complément le plus étudié au monde, et il est sûr. Elle aide ton muscle à être plus fort et à mieux récupérer : exactement ce qu'il faut pour garder tes 51 kg de muscle pendant la perte de gras, et renforcer tes jambes. Elle aide aussi la concentration et la fatigue mentale.</p><p><b>Dose :</b> 3 à 5 g par jour, tous les jours (même sans séance), à n'importe quel moment, dans un verre d'eau ou ta collation. Pas besoin de « phase de charge ». Choisis-la pure, idéalement avec le label Creapure.</p><p style="background:var(--blush);border-radius:12px;padding:10px 12px;font-size:14px"><b>Bon à savoir :</b> les premières semaines, la créatine fait entrer un peu d'eau dans le muscle. La balance peut afficher <b>0,5 à 1,5 kg de plus</b>. Ce n'est pas du gras, c'est de l'eau dans le muscle. Regarde ton tour de taille et ta Tanita, pas seulement le poids. Bois bien tes 2,5 L.</p></div>
+<div class="card"><span class="tag">PRATIQUE</span><h3 style="margin-top:8px">La whey (protéine en poudre)</h3><p>Ce n'est pas magique : c'est juste de la protéine de lait, pratique. Elle t'aide à atteindre tes 150 g de protéines par jour, par exemple dans ton granola, ton porridge ou en shake après la séance. Une dose de 25 à 30 g apporte environ 20 à 24 g de protéines. Choisis-la sans sucre ajouté.</p></div>
+<div class="card"><span class="tag">SAISON</span><h3 style="margin-top:8px">La vitamine D</h3><p>D'octobre à mars, presque tout le monde en manque, surtout quand on travaille en intérieur, en boutique. Elle joue sur l'énergie, le moral, les os et le muscle. Demande à ton médecin : il peut la doser par une prise de sang et te prescrire la bonne quantité.</p></div>
+<div class="card"><span class="tag">UTILE</span><h3 style="margin-top:8px">Le magnésium</h3><p>Stress, fatigue, crampes, jambes lourdes après une journée debout, sommeil léger : il aide. Préfère le bisglycinate de magnésium, le soir. Commence par l'alimentation : amandes, chocolat noir 85 %, légumes verts.</p></div>
+<div class="card"><span class="tag">SI PEU DE POISSON</span><h3 style="margin-top:8px">Les oméga-3</h3><p>Si tu manges du poisson gras (saumon, sardines, maquereau) moins de deux fois par semaine, une capsule d'oméga-3 peut t'aider pour la récupération et l'inflammation.</p></div>
+<div class="card" style="border:2px solid #c0392b"><span class="tag" style="background:#f9dede;color:#8a2a3c">À ÉVITER</span><h3 style="margin-top:8px;color:#c0392b">Brûleurs de graisse, coupe-faim, « détox », boosters</h3><p>Ils sont souvent remplis de caféine et de stimulants. Résultat : cœur qui s'emballe, sommeil abîmé, nervosité, et aucun vrai résultat sur la graisse. Même chose pour les « pre-workout » très caféinés.</p></div>
+</div>
+<div class="callout"><h3>La règle</h3><p>On en parle ensemble avant d'en prendre un. Si tu as un traitement, un problème de santé ou un doute, demande l'avis de ton médecin ou de ton pharmacien. Et l'ordre des priorités ne change jamais : l'assiette, l'eau, le sommeil, les séances, puis seulement les compléments.</p></div>
+</section><section class="partner">
 <h2>Partenariat Bravo Fit Studio</h2>
-<p>Pour les compléments, tu peux passer directement par moi ou commander sur KISS Nutrition avec le code promo :</p>
+<p>Pour la créatine, la whey ou les autres compléments, tu peux passer directement par moi ou commander sur KISS Nutrition avec le code promo :</p>
 <div class="code" id="code">CHANTAL</div>
 <p style="font-size:14px;opacity:.9">Aucun complément n'est obligatoire. L'alimentation, le sommeil et la régularité passent toujours en premier.</p>
 </section>
