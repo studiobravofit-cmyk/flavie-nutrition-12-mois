@@ -293,18 +293,18 @@ tr:last-child td{border:0}
 <div class="levels">
 <div class="level lv1"><small>MAINTIEN</small><b>2 620 kcal</b><p>Ton poids reste stable. Utile pour les pauses de récupération.</p></div>
 <div class="level lv2"><small>APPORT ACTUEL · POINT DE DÉPART</small><b>2 000 kcal</b><p>Environ −24 % par rapport à ton maintien. C'est déjà un vrai déficit.</p></div>
-<div class="level lv3"><small>PLANCHER DE SÉCURITÉ</small><b>1 850 kcal</b><p>On ne descend jamais en dessous : c'est à peine au-dessus de ton métabolisme de base.</p></div>
+<div class="level lv3"><small>PLANCHER DE SÉCURITÉ</small><b>1 850 kcal</b><p>Ton plancher habituel. 1 800 kcal seulement si on bloque 3 semaines, jamais plus bas.</p></div>
 </div>
 <div class="formula">
 <h3>Comment j'ai calculé</h3>
 <p><b>1. Métabolisme de base</b> : <b>1 748 kcal</b>, mesuré par ta Tanita. C'est ce que ton corps brûle au repos complet, calculé à partir de ta vraie composition corporelle.</p>
 <p><b>2. Maintien</b> : 1 748 × 1,5 (métier debout + séances de sport) = <b>≈ 2 620 kcal</b>.</p>
 <p><b>3. Ton point de départ</b> : tu es à 2 000 kcal, soit environ 620 kcal sous ton maintien. On garde ce niveau pendant le reset, puis on ajuste par petites touches de 50 kcal seulement.</p>
-<p><b>Limite de sécurité</b> : on ne descend jamais sous 1 850 kcal. En dessous, tu perdrais du muscle, de l'énergie et du moral. Si la perte ralentit, on augmente d'abord le mouvement (pas, séances) avant de toucher à l'assiette.</p>
+<p><b>Limite de sécurité</b> : ton plancher est à 1 850 kcal. On ne va à 1 800 kcal que si la perte bloque 3 semaines, et jamais en dessous. En dessous, tu perdrais du muscle, de l'énergie et du moral. Si la perte ralentit, on augmente d'abord le mouvement (pas, séances) avant de toucher à l'assiette.</p>
 </div>
 <div class="card sim">
 <div class="row"><h3 style="margin:0">Visualise tes macros</h3>
-<div class="seg" id="seg"><button data-k="m">Maintien</button><button data-k="r" class="on">Reset</button><button data-k="p1">P1</button><button data-k="p2">P2</button><button data-k="p3">P3</button><button data-k="b">Pause</button></div></div>
+<div class="seg" id="seg"><button data-k="m">Maintien</button><button data-k="r" class="on">Reset</button><button data-k="p1">P1</button><button data-k="p2">P2</button><button data-k="p3">P3</button><button data-k="x">Si blocage</button><button data-k="b">Pause</button></div></div>
 <div style="margin-top:14px"><span class="big" id="kcal">2 000</span> <span style="color:var(--muted);font-weight:700">kcal / jour</span></div>
 <div class="bars">
 <div class="bar"><label><span>Protéines</span><span id="bp"></span></label><div class="track"><div class="fill" id="fp" style="background:var(--wine)"></div></div></div>
@@ -322,15 +322,27 @@ tr:last-child td{border:0}
 <p class="lead">On alterne des phases de déficit et des pauses. Ces pauses ne sont pas un retour en arrière : elles relancent l'énergie, protègent le métabolisme et évitent la lassitude.</p>
 <div class="timeline">
 <div class="step"><div class="card"><div class="meta">SEMAINE 1 · 2 000 KCAL</div><h4>Reset · ton apport actuel</h4><p>150 g protéines · 65 g lipides · 204 g glucides. On ne baisse rien : on répartit mieux, on pose les horaires, l'eau et le sommeil.</p></div></div>
-<div class="step"><div class="card"><div class="meta">SEMAINES 2 À 4 · 1 950 KCAL</div><h4>Palier 1 · −50 kcal</h4><p>150 g protéines · 63 g lipides · 196 g glucides. Une différence que ton corps ne ressent presque pas.</p></div></div>
-<div class="step"><div class="card"><div class="meta">SEMAINES 5 À 7 · 1 900 KCAL</div><h4>Palier 2 · −50 kcal</h4><p>150 g protéines · 62 g lipides · 186 g glucides. Seulement si la perte a ralenti et que tout va bien.</p></div></div>
-<div class="step"><div class="card"><div class="meta">SEMAINES 8 À 12 · 1 850 KCAL</div><h4>Palier 3 · plancher</h4><p>150 g protéines · 60 g lipides · 178 g glucides. On ne descend jamais plus bas.</p></div></div>
+<div class="step"><div class="card"><div class="meta">SEMAINES 2 À 4 · 1 950 KCAL</div><h4>Palier 1 · −50 kcal</h4><p>150 g protéines · 63 g lipides · 196 g glucides. Une différence que ton corps ne ressent presque pas. Soit −670 kcal par rapport à ton maintien.</p></div></div>
+<div class="step"><div class="card"><div class="meta">SEMAINES 5 À 7 · 1 900 KCAL</div><h4>Palier 2 · −100 kcal</h4><p>150 g protéines · 62 g lipides · 186 g glucides. Seulement si la perte a ralenti et que tout va bien. Soit −720 kcal par rapport à ton maintien.</p></div></div>
+<div class="step"><div class="card"><div class="meta">SEMAINES 8 À 12 · 1 850 KCAL</div><h4>Palier 3 · −150 kcal · plancher</h4><p>150 g protéines · 60 g lipides · 178 g glucides. Soit −770 kcal par rapport à ton maintien. C'est ton plancher habituel.</p></div></div>
+<div class="step"><div class="card"><div class="meta">UNIQUEMENT SI ON BLOQUE · 1 800 KCAL</div><h4>Option −200 kcal · plancher absolu</h4><p>150 g protéines · 58 g lipides · 170 g glucides. Seulement si le poids stagne 3 semaines au palier 3 malgré les pas et les séances. Jamais plus bas : c'est presque ton métabolisme de base (1 748 kcal).</p></div></div>
 <div class="step"><div class="card"><div class="meta">SEMAINES 13 ET 14 · 2 100 PUIS 2 300 KCAL</div><h4>Pause de récupération</h4><p>À 2 300 kcal : 150 g protéines · 75 g lipides · 256 g glucides. On recharge l'énergie et on consolide le muscle.</p></div></div>
 <div class="step"><div class="card"><div class="meta">MOIS 4 À 6 · CYCLE 2</div><h4>Retour à 2 000 kcal</h4><p>Même logique de petits paliers de 50 kcal, recalculés sur ta nouvelle mesure Tanita.</p></div></div>
 <div class="step"><div class="card"><div class="meta">MOIS 7 À 9 · CYCLE 3</div><h4>Sculpter</h4><p>Priorité à la force et à la silhouette, surtout le bas du corps. Protéines toujours à 150 g.</p></div></div>
 <div class="step"><div class="card"><div class="meta">MOIS 10 À 12</div><h4>Consolidation</h4><p>Dernière phase de perte si besoin, puis remontée progressive vers ton nouveau maintien, en autonomie.</p></div></div>
 </div>
-<div class="formula"><h3>Le rythme à viser</h3><p>Chaque palier ne descend que de 50 kcal : jamais de coupe brutale.</p><p>Entre <b>0,5 et 1 kg par semaine</b> au début, puis un peu moins au fil des mois. C'est le rythme qui permet de perdre de la graisse sans sacrifier le muscle, la peau, les cheveux ni l'énergie. Plus rapide, c'est surtout de l'eau et du muscle qui partent.</p></div>
+<h3 style="margin:22px 0 10px;color:var(--wine)">Tes paliers, un par un</h3>
+<div class="tw"><table>
+<tr><th>Palier</th><th>Calories</th><th>Par rapport à 2 000</th><th>Protéines</th><th>Lipides</th><th>Glucides</th></tr>
+<tr><td>Reset · semaine 1</td><td><b>2 000</b></td><td>0</td><td>150 g</td><td>65 g</td><td>204 g</td></tr>
+<tr><td>Palier 1 · semaines 2 à 4</td><td><b>1 950</b></td><td>−50</td><td>150 g</td><td>63 g</td><td>196 g</td></tr>
+<tr><td>Palier 2 · semaines 5 à 7</td><td><b>1 900</b></td><td>−100</td><td>150 g</td><td>62 g</td><td>186 g</td></tr>
+<tr><td>Palier 3 · semaines 8 à 12</td><td><b>1 850</b></td><td>−150</td><td>150 g</td><td>60 g</td><td>178 g</td></tr>
+<tr><td>Seulement si on bloque</td><td><b>1 800</b></td><td>−200</td><td>150 g</td><td>58 g</td><td>170 g</td></tr>
+<tr><td>Pause · semaines 13 et 14</td><td><b>2 100 → 2 300</b></td><td>+100 → +300</td><td>150 g</td><td>75 g</td><td>256 g</td></tr>
+</table></div>
+<p style="font-size:13px;color:var(--muted);margin-top:8px">Ton maintien est d'environ 2 620 kcal : à 2 000 kcal, tu es déjà à −620 kcal. C'est pour ça que les paliers restent petits. Les macros de la pause sont celles de 2 300 kcal.</p>
+<div class="formula"><h3>Le rythme à viser</h3><p>Les paliers descendent en crescendo, 50 kcal à la fois, à partir de tes 2 000 kcal : −50, −100, −150, et −200 seulement si on bloque. Jamais de coupe brutale.</p><p>Entre <b>0,5 et 1 kg par semaine</b> au début, puis un peu moins au fil des mois. C'est le rythme qui permet de perdre de la graisse sans sacrifier le muscle, la peau, les cheveux ni l'énergie. Plus rapide, c'est surtout de l'eau et du muscle qui partent.</p></div>
 <div class="callout"><h3>La règle d'ajustement</h3><p>Chaque palier est validé ensemble au coaching hebdomadaire. Si la faim devient forte, si le sommeil se dégrade ou si l'énergie baisse au travail, on remonte au palier précédent. Si le poids ne bouge plus pendant 3 semaines, on ajoute d'abord des pas ou une séance, puis seulement ensuite on passe au palier suivant.</p></div>
 </section>
 
@@ -680,7 +692,7 @@ dq();
 <div class="bar"><label><span>Protéines</span><span id="ccp"></span></label><div class="track"><div class="fill" id="ccpf" style="background:var(--wine)"></div></div></div>
 <div class="bar"><label><span>Glucides</span><span id="ccg"></span></label><div class="track"><div class="fill" id="ccgf" style="background:var(--gold)"></div></div></div>
 <div class="bar"><label><span>Lipides</span><span id="ccl"></span></label><div class="track"><div class="fill" id="cclf" style="background:var(--sage)"></div></div></div>
-<select id="ccgoal"><option value="2000">Objectif Reset · 2 000 kcal</option><option value="1950">Palier 1 · 1 950 kcal</option><option value="1900">Palier 2 · 1 900 kcal</option><option value="1850">Palier 3 · 1 850 kcal</option><option value="2300">Pause · 2 300 kcal</option><option value="2620">Maintien · 2 620 kcal</option></select>
+<select id="ccgoal"><option value="2000">Objectif Reset · 2 000 kcal</option><option value="1950">Palier 1 · 1 950 kcal</option><option value="1900">Palier 2 · 1 900 kcal</option><option value="1850">Palier 3 · 1 850 kcal</option><option value="1800">Si blocage · 1 800 kcal</option><option value="2300">Pause · 2 300 kcal</option><option value="2620">Maintien · 2 620 kcal</option></select>
 </div></div>
 </div>
 <div class="card cc" style="margin-top:14px">
@@ -796,8 +808,9 @@ function toast(t){var el=$('#toast');el.textContent=t;el.classList.add('show');c
 var L={m:{k:2620,p:150,l:80,g:325,t:"Maintien estimé : ton poids resterait stable. Référence de calcul."},
 r:{k:2000,p:150,l:65,g:204,t:"Reset · semaine 1 : ton apport actuel, mieux réparti. On ne coupe rien."},
 p1:{k:1950,p:150,l:63,g:196,t:"Palier 1 · semaines 2 à 4 : −50 kcal, pris sur les glucides et les lipides."},
-p2:{k:1900,p:150,l:62,g:186,t:"Palier 2 · semaines 5 à 7 : −50 kcal, uniquement si faim et énergie sont bonnes."},
-p3:{k:1850,p:150,l:60,g:178,t:"Palier 3 · semaines 8 à 12 : le plancher. On ne descend pas plus bas."},
+p2:{k:1900,p:150,l:62,g:186,t:"Palier 2 · semaines 5 à 7 : −100 kcal, uniquement si faim et énergie sont bonnes."},
+p3:{k:1850,p:150,l:60,g:178,t:"Palier 3 · semaines 8 à 12 : −150 kcal, ton plancher habituel."},
+x:{k:1800,p:150,l:58,g:170,t:"Seulement si on bloque 3 semaines : −200 kcal. C'est le plancher absolu, jamais plus bas."},
 b:{k:2300,p:150,l:75,g:256,t:"Pause · semaines 13 et 14 : on remonte par étapes (2 100 puis 2 300) pour recharger."}};
 function sim(k){var x=L[k];$('#kcal').textContent=x.k.toLocaleString('fr-FR');
 $('#bp').textContent=x.p+' g · '+Math.round(x.p*4/x.k*100)+' %';$('#fp').style.width=(x.p*4/x.k*100)+'%';
@@ -916,7 +929,7 @@ var QB=["Quel fruit contient le moins de sucre ?|Fraises|Banane|Raisin|Mangue|0|
 "Les céréales sucrées du matin donnent souvent…|Faim vers 10 h|Beaucoup de protéines|Beaucoup de fibres|Rien de spécial|0|Pic de sucre, puis fringale.",
 "Chocolat noir 85 % : une portion raisonnable, c'est…|2 carrés|La tablette|10 carrés|Interdit|0|Environ 10 g, à savourer lentement.",
 "Pour une envie de sucré, le meilleur réflexe est…|Manger debout, vite|Manger assise, après un repas avec des protéines|Ne plus rien manger pendant 2 jours|Boire un soda|1|Tu en profites plus et tu en manges moins.",
-"On ne descend jamais sous…|1 850 kcal|1 000 kcal|2 620 kcal|500 kcal|0|C'est ton plancher de sécurité.",
+"On ne descend jamais sous…|1 800 kcal|1 000 kcal|2 620 kcal|500 kcal|0|1 850 kcal est ton plancher habituel, 1 800 kcal seulement si on bloque.",
 "Tes paliers descendent de…|50 kcal|500 kcal|1 000 kcal|300 kcal|0|De petites touches, jamais de coupe brutale.",
 "Si la perte ralentit, on commence par…|Supprimer des repas|Ajouter du mouvement|Arrêter les protéines|Boire moins|1|D'abord des pas ou une séance, ensuite l'assiette.",
 "Les protéines changent-elles d'un palier à l'autre ?|Oui, elles baissent|Non, elles restent à 150 g|Elles doublent|On les supprime|1|Elles protègent ton muscle en permanence.",
